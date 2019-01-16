@@ -1,2 +1,2 @@
 # ELXRemoteServer
-Simple remote control server create by Electronjs and Firebase. 
+Simple remote control server using Electronjs and Firebase. 
