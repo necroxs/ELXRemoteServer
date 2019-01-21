@@ -103,20 +103,26 @@ async function RunCommand(action) {
 }
 
 async function putfake() {
-    //var tmpAction = "";
-    //clientData.actionResult.forEach(action => {
-    //   if(action)
-    //});
-    clientData.actionResult.push({ tag: 'getprocesses', isDone: false, payload: null, message: 'D:\\Untitled.png' });
-    clientData.actionResult.push({ tag: 'getdrives', isDone: false, payload: null, message: 'D:\\Untitled.png' });
-    //clientData.actionResult.push({ tag: 'getfile', isDone: false, payload: null, message: 'D:\\Untitled.png' });
-    //clientData.actionResult.push({ tag: 'killprocess', isDone: false, payload: null, message: '17636' });
-    //clientData.actionResult.push({ tag: 'runprocess', isDone: false, payload: null, message: 'D:\\sss.txt' });
-    //var testfile = { tag: 'sendrunprocess', isDone: false, payload: null, message: 'test.txt' };
-    //testfile.payload = dir.base64_encode('D:\\sss.txt');
-    //clientData.actionResult.push(testfile);
-    clientData.actionResult.push({ tag: 'sendmessage', isDone: false, payload: null, message: 'Hi this is test' });
-    await fs.update(connectionID, clientData);
+    try {
+      
+        clientData.actionResult.push({ tag: 'getprocesses', isDone: false, payload: null, message: 'D:\\Untitled.png' });
+        clientData.actionResult.push({ tag: 'getdrives', isDone: false, payload: null, message: 'D:\\Untitled.png' });
+        clientData.actionResult.push({ tag: 'getfile', isDone: false, payload: null, message: 'D:\\Untitled.png' });
+        //clientData.actionResult.push({ tag: 'killprocess', isDone: false, payload: null, message: '17636' });
+        //clientData.actionResult.push({ tag: 'runprocess', isDone: false, payload: null, message: 'D:\\sss.txt' });
+        //var testfile = { tag: 'sendrunprocess', isDone: false, payload: null, message: 'test.txt' };
+        //testfile.payload = dir.base64_encode('D:\\sss.txt');
+        //clientData.actionResult.push(testfile);
+        clientData.actionResult.push({ tag: 'sendmessage', isDone: false, payload: null, message: 'Hi this is test' });
+
+        await fs.update(connectionID, clientData);
+
+    }
+    catch (ex) {
+
+
+    }
+
 }
 
 ipcRenderer.on("Exit", async function () {
