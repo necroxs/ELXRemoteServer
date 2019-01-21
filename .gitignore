@@ -1,3 +1,4 @@
+node_modules/
 node_modules/ajv/lib/compile/index.js
 node_modules/@sindresorhus/is/license
 node_modules/@sindresorhus/is/package.json
